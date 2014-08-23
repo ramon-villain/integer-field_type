@@ -1,4 +1,4 @@
-<?php namespace Addon\FieldType\Integer;
+<?php namespace Streams\Addon\FieldType\Integer;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 
