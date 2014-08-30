@@ -12,39 +12,23 @@ class IntegerFieldType extends FieldTypeAbstract
     public $columnType = 'integer';
 
     /**
-     * Field type version
-     *
-     * @var string
-     */
-    public $version = '1.1.0';
-
-    /**
-     * Available field type settings.
-     *
-     * @var array
-     */
-    public $settings = array(
-        'minimum',
-        'maximum',
-    );
-
-    /**
-     * Field type author information.
-     *
-     * @var array
-     */
-    public $author = array(
-        'name' => 'AI Web Systems, Inc.',
-        'url'  => 'http://aiwebsystems.com/',
-    );
-
-    /**
      * Return the input used for forms.
      *
      * @return mixed
      */
-    public function formInput()
+    public function input()
     {
-        return \Form::input('integer', $this->formSlug, $this->value);
+        return \Form::input('number', $this->inputName(), $this->value());
+    }
+
+    /**
+     * Force an integer value.
+     *
+     * @param $value
+     * @return int|mixed
+     */
+    public function mutate($value)
+    {
+        return (int)$value;
     }
 }
