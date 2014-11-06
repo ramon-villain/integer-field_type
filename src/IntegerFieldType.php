@@ -44,7 +44,7 @@ class IntegerFieldType extends FieldType
      * @param $value
      * @return int
      */
-    public function onSet($value)
+    protected function onSet($value)
     {
         return (int)$value;
     }
