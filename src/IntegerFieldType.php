@@ -21,30 +21,19 @@ class IntegerFieldType extends FieldType
     protected $rules = ['integer'];
 
     /**
-     * Uses integer database column.
+     * The database column type.
      *
      * @var string
      */
     protected $columnType = 'integer';
 
     /**
-     * Return the input HTML.
-     *
-     * @return mixed
-     */
-    public function input()
-    {
-        return app('form')->input('number', $this->getFieldName(), $this->getValue());
-    }
-
-    /**
-     * Hook into the setAttribute and make
-     * sure the value is an integer.
+     * Convert value to integer before setting on the model.
      *
      * @param $value
-     * @return int
+     * @return int|mixed
      */
-    protected function onSet($value)
+    public function mutate($value)
     {
         return (int)$value;
     }
