@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\FieldType\Integer;
+<?php namespace Anomaly\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
