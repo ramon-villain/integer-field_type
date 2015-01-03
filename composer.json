@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/integer-field-type",
+    "name": "anomaly/integer-field_type",
     "type": "streams-addon",
     "description": "Integer field type.",
     "authors": [
